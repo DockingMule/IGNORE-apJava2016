@@ -6,13 +6,13 @@ package alloway.austin.main;
 
 /*Lessons*/
 
-/** Lesson_14_Activity_One
- System.out.println("Please Enter a Number: ");
- int num1 = scan.nextInt();
- if (num1>=5 && num1<=76){
- System.out.println("False");}
- else
- System.out.println("True");*/
+/* Lesson_14_Activity_One
+            System.out.println("Please Enter a Number: ");
+        int num1 = scan.nextInt();
+        if (num1>=5 && num1<=76){
+            System.out.println("False");}
+        else
+            System.out.println("True");*/
 
 /* Lesson_14_Activity_Two
         System.out.println("Please enter two integers: ");
@@ -23,26 +23,26 @@ package alloway.austin.main;
         else
             System.out.println("One or both are negative.");*/
 
-/** Lesson_14_Activity_Three
- System.out.println("Please enter the first octet:");
- int num1 = scan.nextInt();
- System.out.println("Please enter the second octet:");
- int num2 = scan.nextInt();
- System.out.println("Please enter the third octet:");
- int num3 = scan.nextInt();
- System.out.println("Please enter the fourth octet:");
- int num4 = scan.nextInt();
- if (num1<0 || num1>255)
- System.out.println("Octet 1 is incorrect");
- if (num2<0 || num2>255)
- System.out.println("Octet 2 is incorrect");
- if (num3<0 || num3>255)
- System.out.println("Octet 3 is incorrect");
- if (num4<0 || num4>255)
- System.out.println("Octet 4 is incorrect");
- else
- System.out.println("IP Address: " + num1 + "." + num2 + "." + num3 + "." + num4);
- **/
+/* Lesson_14_Activity_Three
+            System.out.println("Please enter the first octet:");
+        int num1 = scan.nextInt();
+             System.out.println("Please enter the second octet:");
+        int num2 = scan.nextInt();
+             System.out.println("Please enter the third octet:");
+        int num3 = scan.nextInt();
+             System.out.println("Please enter the fourth octet:");
+        int num4 = scan.nextInt();
+        if (num1<0 || num1>255)
+             System.out.println("Octet 1 is incorrect");
+        if (num2<0 || num2>255)
+             System.out.println("Octet 2 is incorrect");
+        if (num3<0 || num3>255)
+             System.out.println("Octet 3 is incorrect");
+        if (num4<0 || num4>255)
+             System.out.println("Octet 4 is incorrect");
+        else
+             System.out.println("IP Address: " + num1 + "." + num2 + "." + num3 + "." + num4);
+ */
 
 /*Assignment_2
         System.out.println("On what day of the month were your born? (number) ");
