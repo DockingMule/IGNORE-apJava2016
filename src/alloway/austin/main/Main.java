@@ -238,6 +238,8 @@ int x = scan.nextInt();
 }*/
 
 
+import com.sun.deploy.config.Config;
+
 import java.util.Scanner;
 
 public class Main {
@@ -245,6 +247,34 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
-
+        double lon = 0;
+        double lat = 0;
+        double maxlat = -90;
+        double maxlon = -180;
+        double minlat = 90;
+        double minlon = 180;
+        int input = 1;
+        while (input ==1){
+            System.out.println("Please enter the latitude:");
+            lat = scan.nextDouble();
+            System.out.println("Please enter the longitude");
+            lon = scan.nextDouble();
+            System.out.println("Would you like to enter another location?");
+            input = scan.nextInt();
+            if ((lat < -90 || lat > 90)||(lon <-180 || lon >180))
+                System.out.println("Incorrect Latitude or Longitude");
+            else if (lat > maxlat)
+                maxlat = lat;
+            else if (lon > maxlon)
+                maxlon = lon;
+            else if (lon < minlon)
+                minlon = lon;
+            else if (lat < minlat)
+                minlat = lat;
+        }
+        System.out.println("Farthest North: " + maxlat);
+        System.out.println("Farthest South: " + minlat);
+        System.out.println("Farthest East: " + maxlon);
+        System.out.println("Farthest West: " + minlon);
     }
 }
