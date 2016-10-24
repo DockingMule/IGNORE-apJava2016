@@ -259,18 +259,19 @@ public class Main {
             lat = scan.nextDouble();
             System.out.println("Please enter the longitude");
             lon = scan.nextDouble();
-            System.out.println("Would you like to enter another location?");
+            if ((lat < -90 || lat > 90)||(lon <-180 || lon >180)){
+                System.out.println("Incorrect Latitude or Longitude");}
+            else{
+                System.out.println("Would you like to enter another location?");
             input = scan.nextInt();
-            if ((lat < -90 || lat > 90)||(lon <-180 || lon >180))
-                System.out.println("Incorrect Latitude or Longitude");
-            else if (lat > maxlat)
+                if (lat > maxlat)
                 maxlat = lat;
-            else if (lon > maxlon)
+                if (lon > maxlon)
                 maxlon = lon;
-            else if (lon < minlon)
+                if (lon < minlon)
                 minlon = lon;
-            else if (lat < minlat)
-                minlat = lat;
+                if (lat < minlat)
+                minlat = lat;}
         }
         System.out.println("Farthest North: " + maxlat);
         System.out.println("Farthest South: " + minlat);
