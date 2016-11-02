@@ -235,18 +235,9 @@ int x = scan.nextInt();
             e += 2;
         }
     }
-}*/
+}
 
-
-import com.sun.deploy.config.Config;
-
-import java.util.Scanner;
-
-public class Main {
-
-    public static void main(String[] args) {
-
-        Scanner scan = new Scanner(System.in);
+Assignment_3
         double lon = 0;
         double lat = 0;
         double maxlat = -90;
@@ -261,8 +252,8 @@ public class Main {
             lon = scan.nextDouble();
             System.out.println("Would you like to enter another location?");
             input = scan.nextInt();
-            if ((lat < -90 || lat > 90)||(lon <-180 || lon >180))
-                System.out.println("Incorrect Latitude or Longitude");
+            if ((lat < -90 || lat > 90)||(lon <-180 || lon >180)){
+                System.out.println("Incorrect Latitude or Longitude");}
             else if (lat > maxlat)
                 maxlat = lat;
             else if (lon > maxlon)
@@ -276,5 +267,19 @@ public class Main {
         System.out.println("Farthest South: " + minlat);
         System.out.println("Farthest East: " + maxlon);
         System.out.println("Farthest West: " + minlon);
+    }
+}*/
+
+
+import com.sun.deploy.config.Config;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+
     }
 }
