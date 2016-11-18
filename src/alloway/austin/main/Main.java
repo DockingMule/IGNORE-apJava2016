@@ -233,21 +233,8 @@ int x = scan.nextInt();
             e++;
             System.out.print(e + " ");
             e += 2;
-        }
-    }
-}*/
 
-
-import com.sun.deploy.config.Config;
-
-import java.util.Scanner;
-
-public class Main {
-
-    public static void main(String[] args) {
-
-        Scanner scan = new Scanner(System.in);
-        double lon = 0;
+            double lon = 0;
         double lat = 0;
         double maxlat = -90;
         double maxlon = -180;
@@ -277,5 +264,99 @@ public class Main {
         System.out.println("Farthest South: " + minlat);
         System.out.println("Farthest East: " + maxlon);
         System.out.println("Farthest West: " + minlon);
+        }
+
+        Lesson_22_Activity_One
+        Scanner scan = new Scanner(System.in);
+        String v;
+        int x;
+        System.out.println("Please enter a string:");
+        v = scan.nextLine();
+        x = (v.length());
+        int y = 0;
+        while (y<x){
+            System.out.println(v.charAt(y));
+            y++;
+        }
+    }
+    System.out.println("Please enter a tweet:");
+        String tweet = scan.nextLine();
+
+        if (tweet.length() > 140) {
+            System.out.println("Excess Characters: " + (tweet.length() - 140));}
+        else{
+            System.out.println("Length Correct");
+
+            int hashtags = 0;
+            int mentions = 0;
+            String tweetRetweet = "The input was not a retweet.";
+            char tweetLastChar = tweet.charAt(tweet.length() - 1);
+
+            for (int i = 0; i < tweet.length(); i++) {
+                if (tweet.charAt(i) == '#' || tweet.charAt(i) == '@') {
+                    if (i != (tweet.length() - 1)) {
+                        if (!(tweet.charAt(i + 1) == '\t' || tweet.charAt(i + 1) == ' ')) {
+                            if (tweet.charAt(i) == '#')
+                                hashtags++;
+                            else if (tweet.charAt(i) == '@')
+                                mentions++;
+                        }
+                    }
+                }
+            }
+            if (tweet.contains("RT:") || tweet.contains("rt:")) {
+                if (tweet.indexOf("RT:") == tweet.lastIndexOf("RT:"))
+                    tweetRetweet = "The input was a retweet.";}
+            System.out.println("Number of Mentions: " + mentions);
+            System.out.println("Number of Hashtags: " + hashtags);
+            System.out.println(tweetRetweet);}
+}
+Lesson_24_Activity_One
+for (int loopCurrent = 23, loopCurrentTwo = 1; loopCurrent <= 89; loopCurrent++, loopCurrentTwo++) {
+            System.out.print(loopCurrent + " ");
+            if (loopCurrentTwo % 10 == 0)
+                System.out.print("\n");
+ Lesson_24_Activity_Two
+  for (int i = 1; i <= 50; i++){
+            if ((i%2) == 0)
+                System.out.println(i);
+Lesson_24_Activity_Three
+int x = scan.nextInt();
+        if (x >100 || x <0)
+            System.out.println("error");
+        else{
+            for (int y = x; y <=100; y++){
+                System.out.print(y +" ");
+                if (y % 20 == 0)
+                    System.out.print("\n");
+            } }
+ */
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter the First String:");
+        String initial = scan.next();
+        System.out.println("Please enter a replacement;");
+        String replacement = scan.next();
+        int location = initial.indexOf('%');
+        int last = initial.length();
+        char[] mustHave = { 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',' ','\r','%'};
+        for (int i = 0; i < mustHave.length(); i++)
+                if (!(initial.indexOf(i) = -1)){
+                    initial.replace("%", replacement);
+                    System.out.println(initial.replace("%", replacement));}
+
+
+        else
+            System.out.println("error no % found!");
+
+
+
+
     }
 }
