@@ -330,33 +330,49 @@ int x = scan.nextInt();
                 if (y % 20 == 0)
                     System.out.print("\n");
             } }
- */
+ Lesson_29_Activity_One
+ public static String [] list = {};
+    public static void main(String[] args) {
+        String longest = "";
+        for (int i = 0; i < list.length; i++){
+                if (list[i].length() > longest.length()){
+                    longest = list[i];}}
+        System.out.println(longest);
 
+Lesson_29_Activity_Two
+        public static String [] list = {};
+    public static void main(String[] args) {
+        for (int i = 0; i < list.length; i++){
+            for(int c = list[i].length()-1; c>=0; c--){
+                System.out.print(list[i].charAt(c));}
+        System.out.println();}
+
+Lesson_30_Activity
+ public static String [] list = {};
+    public static void main(String[] args) {
+        for (int i = 0; i < list.length; i ++) {
+            for (int c = 0; c < list[i].length(); c++) {
+                if (list[i].charAt(c) == ' ') {
+                    list[i] = list[i].replace(" ", "");*/
+
+import java.util.Arrays;
 import java.util.Scanner;
+import java.util.List;
 
 public class Main {
-
     public static void main(String[] args) {
-
         Scanner scan = new Scanner(System.in);
-        System.out.println("Enter the First String:");
-        String initial = scan.next();
-        System.out.println("Please enter a replacement;");
-        String replacement = scan.next();
-        int location = initial.indexOf('%');
-        int last = initial.length();
-        char[] mustHave = { 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',' ','\r','%'};
-        for (int i = 0; i < mustHave.length(); i++)
-                if (!(initial.indexOf(i) = -1)){
-                    initial.replace("%", replacement);
-                    System.out.println(initial.replace("%", replacement));}
-
-
-        else
-            System.out.println("error no % found!");
-
-
-
-
+        System.out.println("Enter a number in base 8: ");
+        int input = scan.nextInt();
+        int answer = 0;
+        String inputLength = Integer.toString(input);
+        int length = inputLength.length();
+        int a = 1;
+        for (int i = 0; i < length; i++) {
+            int v = (input / (a)) % 10;
+            int u = 8 ^ i;
+            answer = (v * u) + answer;
+            a = a*10;}
+            System.out.println(answer);
+        }
     }
-}
