@@ -1,5 +1,7 @@
 package alloway.austin.main;
 
+import java.util.Scanner;
+
 /**
  * Created by Austin on 9/8/2016.
  */
@@ -353,13 +355,40 @@ Lesson_30_Activity
         for (int i = 0; i < list.length; i ++) {
             for (int c = 0; c < list[i].length(); c++) {
                 if (list[i].charAt(c) == ' ') {
-                    list[i] = list[i].replace(" ", "");*/
+                    list[i] = list[i].replace(" ", "");
+                    public class Main {
+    public static void monthName(int monthNumber){
+        String months []={"January", "February","March","April","May","June","July","August","September","October","November","December"};
+        for (int i = 0; i <= months.length; i++){
+            if (monthNumber == i)
+                System.out.print(months[i-1]);
+        }
+            if (monthNumber<1 || monthNumber>months.length)
+            System.out.println("Not Valid Month!");
+    }
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Please enter a month (number): ");
+        int monthNumber = scan.nextInt();
+        monthName(monthNumber);
+        }
+    }
+        public static void swap(int x , int y){
+        System.out.println(y+ " " +x);
 
-import java.util.Arrays;
-import java.util.Scanner;
-import java.util.List;
+    }
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Please enter Two Numbers: ");
+        int x = scan.nextInt();
+        int y = scan.nextInt();
+        swap(x, y);
+        }
+    }
+*/
 
-public class Main {
+ //on hold
+/*public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter a number in base 8: ");
@@ -373,6 +402,89 @@ public class Main {
             int u = 8 ^ i;
             answer = (v * u) + answer;
             a = a*10;}
-            System.out.println(answer);
+        System.out.println(answer);
+    }
+}
+ public static void realTime(int seconds){
+        int remainingSeconds = seconds;
+        int hours = (remainingSeconds/3600);
+        remainingSeconds = (remainingSeconds%3600);
+        int minutes = (remainingSeconds/60);
+        remainingSeconds = (remainingSeconds%60);
+        System.out.println("Hours: " + hours);
+        System.out.println("Minutes: "+minutes);
+        System.out.println("Seconds: "+remainingSeconds);
+
+    }
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Please Enter the Amount of Second:");
+        int seconds = scan.nextInt();
+        realTime(seconds);
+        public class Main {
+
+    public static void upper (String c []) {
+        for (int i = 0; i < c.length; i++){
+            c[i] = c[i].toUpperCase();
+            System.out.print(c[i]+" ");
         }
     }
+    public static void main(String[] args) {
+        String list [] = {"blue","greene"};
+        upper(list);
+        }
+    }
+        public static void randomize (int c []) {
+        for (int i = 0; i < c.length; i++){
+            c[i]=(int)(Math.random()*90+10);
+            System.out.println(c[i]);
+        }
+    }
+    public static void main(String[] args) {
+        int [] list = new int [] {1,2,3,4,5,6,6};
+        randomize(list);
+        }
+        }
+        public class Lesson_33_Activity_Four {
+    public static void reverse (int list []) {
+        int temp;
+
+        for (int i = 0; i < list.length/2; i++)
+        {
+            temp = list[i];
+
+            list[i] = list[list.length-1-i];
+
+            list[list.length-1-i] = temp;
+        }
+        }
+        public static void main(String[] args) {
+            int [] list = new int [] {1,2,3,4,5,6,6};
+            reverse(list);
+        }
+    }
+
+*/
+
+import java.util.Arrays;
+import java.util.Scanner;
+import java.util.List;
+
+public class Main {
+    public static void insertValue (int list [], int a, int b) {
+        for (int i = 0; i < list.length; i++){
+            if (i <b){
+            list[(list.length-1)-i] = list[(list.length-2)-i];}
+
+            else if (i == b)
+                list[i] = a;
+            else
+                list[i]= list[i];
+                System.out.print(list[i]+" ");
+        }}
+        public static void main(String[] args) {
+            int [] a  = new int [] {1,2,3,4,5};
+            insertValue(a, 69, 2);
+        }
+    }
+
