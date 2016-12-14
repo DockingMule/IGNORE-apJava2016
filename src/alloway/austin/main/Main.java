@@ -463,14 +463,6 @@ Lesson_30_Activity
             reverse(list);
         }
     }
-
-*/
-
-import java.util.Arrays;
-import java.util.Scanner;
-import java.util.List;
-
-public class Main {
     public static void insertValue (int list [], int a, int b) {
         for (int i = 0; i < list.length; i++){
             if (i <b){
@@ -485,6 +477,165 @@ public class Main {
         public static void main(String[] args) {
             int [] a  = new int [] {1,2,3,4,5};
             insertValue(a, 69, 2);
+
+            public static double average (double list []) {
+        double tally = 0;
+        for (int i = 0; i < list.length; i++){
+            tally = list[i] + tally;
+        }
+        double average = tally/list.length;
+        return average;}
+        public static void main(String[] args) {
+            double [] a  = new double [] {1,2,3,4,5};
+            average(a);
+        }
+
+        public class Lesson_34_Activity_One {
+    public static int sum (int list []) {
+        int answer = 0;
+        for (int i = 0; i < list.length; i++){
+            answer = list[i] + answer;}
+        return answer;}
+        public static void main(String[] args) {
+            int [] a  = new int [] {1,2,3,4,5};
+            sum(a);
+        }
+    }
+
+    public class Lesson_34_Activity_Two {
+    public static double average (int list []) {
+        int tally = 0;
+        for (int i = 0; i < list.length; i++){
+            tally = list[i] + tally;
+        }
+        double average = tally/list.length;
+        return average;}
+        public static void main(String[] args) {
+            int [] a  = new int [] {1,2,3};
+            average(a);
+        }
+    }
+
+
+
+public static int findmax (int list []) {
+        int max = 0;
+        for (int i = 0; i < list.length; i++) {
+            if (i==0)
+                max = list[i];
+            if (list[i] > max)
+                max = list[i];
+            }
+        return max;
+        }
+        public static void main(String[] args) {
+            int [] a  = new int [] {1,2,3,4,5};
+            findmax(a);
+        }
+        public class Lesson_34_Activity_Four {
+    public static int findMin (int list []) {
+        int max = 0;
+        for (int i = 0; i < list.length; i++) {
+            if (i==0)
+                max = list[i];
+            if (list[i] < max)
+                max = list[i];
+            }
+        return max;
+        }
+        public static void main(String[] args) {
+            int [] a  = new int [] {1,2,3};
+            findMin(a);
+        }
+    }
+
+    public class Lesson_34_Activity_Four {
+    public static int findMin (int list []) {
+        int max = 0;
+        for (int i = 0; i < list.length; i++) {
+            if (i==0)
+                max = list[i];
+            if (list[i] < max)
+                max = list[i];
+            }
+        return max;
+        }
+        public static void main(String[] args) {
+            int [] a  = new int [] {1,2,3};
+            findMin(a);
+        }
+    }
+
+    public class Lesson_34_Activity_Five {
+    public static int sumEven (int list []) {
+        int sum = 0;
+        for (int i = 0; i < list.length; i++) {
+            if (list[i]%2 == 0)
+                sum = sum + list[i];
+            }
+        return sum;
+        }
+        public static void main(String[] args) {
+            int [] a  = new int [] {1,2,3,4,5};
+            sumEven(a);
+        }
+    }
+
+    public class Lesson_34_Activity_Six {
+    public static boolean allPositive (int list []) {
+        int sum = 0;
+        for (int i = 0; i < list.length; i++) {
+            if (list[i] > 0)
+                sum ++;
+        }
+        if (sum == list.length)
+            return true;
+            return false;
+    }
+        public static void main(String[] args) {
+            int [] a  = new int [] {1,2,3,4,5};
+            allPositive(a);
+        }
+    }
+
+    public class Main {
+    public static boolean allPositive (int list []) {
+        int sum = 0;
+        for (int i = 0; i < list.length; i++) {
+            if (list[i] > 0)
+                sum ++;
+        }
+        if (sum == list.length)
+            return true;
+            return false;
+    }
+        public static void main(String[] args) {
+            int [] a  = new int [] {1,2,3,4,5};
+            allPositive(a);
+        }
+    }
+
+
+*/
+
+import java.util.Arrays;
+import java.util.Scanner;
+import java.util.List;
+
+public class Main {
+    public static boolean allPositive (int list []) {
+        int sum = 0;
+        for (int i = 0; i < list.length; i++) {
+            if (list[i] > 0)
+                sum ++;
+        }
+        if (sum == list.length)
+            return true;
+            return false;
+    }
+        public static void main(String[] args) {
+            int [] a  = new int [] {1,2,3,4,5};
+            allPositive(a);
         }
     }
 
