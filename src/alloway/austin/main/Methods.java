@@ -48,7 +48,8 @@ public class Methods {
                 int answer = 0;
                 for (int i = 0; i < list.length; i++){
                     answer = list[i] + answer;}
-                return answer;}
+                return answer;
+            }
 
 /**Max of Array*/
 
