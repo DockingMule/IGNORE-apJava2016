@@ -10,7 +10,7 @@ package alloway.austin.main;
         import java.util.List;
 
 
-/*Lessons*/
+/*Lessons
 
 class Lesson_14_Activity_One{
         System.out.println("Please Enter a Number: ");
@@ -394,7 +394,7 @@ int x = scan.nextInt();
             System.out.println("Number of Hashtags: " + hashtags);
             System.out.println(tweetRetweet);}
 }*/
-class Lesson_24_Activity_One{
+/*class Lesson_24_Activity_One{
 for (int loopCurrent = 23, loopCurrentTwo = 1; loopCurrent <= 89; loopCurrent++, loopCurrentTwo++) {
             System.out.print(loopCurrent + " ");
             if (loopCurrentTwo % 10 == 0)
@@ -447,7 +447,7 @@ class Lesson_30_Activity{
             if (monthNumber<1 || monthNumber>months.length)
             System.out.println("Not Valid Month!");
     }}}}}}}
-    /*public static void main(String[] args) {
+    public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Please enter a month (number): ");
         int monthNumber = scan.nextInt();
@@ -466,10 +466,10 @@ class Lesson_30_Activity{
         swap(x, y);
         }
     }
-*/
+*//*
 
 //on hold
-/*public class Main {
+public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter a number in base 8: ");
@@ -525,7 +525,7 @@ class Lesson_30_Activity{
         int [] list = new int [] {1,2,3,4,5,6,6};
         randomize(list);
         }
-        }*/
+        }
 class Lesson_33_Activity_Four {
     public static void reverse (int list []) {
         int temp;
@@ -657,5 +657,4 @@ class Lesson_34_Activity_Six {
         int [] a  = new int [] {1,2,3,4,5};
         allPositive(a);
     }
-}}}}
-
+}}}}*/
