@@ -18,15 +18,14 @@ public class Methods {
 
 /**Insert into array*/
 
-            public static void insertValue (int list [], int a, int b) {
-                for (int i = 0; i < list.length; i++) {
-                    if (i < b) {
-                        list[(list.length - 1) - i] = list[(list.length - 2) - i];
-                    } else if (i == b)
-                        list[i] = a;
-                    else
-                        list[i] = list[i];
-                    System.out.print(list[i] + " ");}
+            public static int[] instert(int[] a, int pos, int num) {
+                int[] result = new int[a.length];
+                for(int i = 0; i < pos; i++)
+                    result[i] = a[i];
+                result[pos] = num;
+                for(int i = pos + 1; i < a.length; i++)
+                    result[i] = a[i - 1];
+                return result;
             }
 
 /**Average of Array*/
@@ -88,7 +87,7 @@ public class Methods {
 
 /**Change Number into Binary*/
 
-            public static void inBinary(int initial) {
+           /** public static void inBinary(int initial) {
                 int [] list = new int [] {128,64,32,16,8,4,2,1};
                 int current = initial;
                 int [] binary = new int [] {0,0,0,0,0,0,0,0};
@@ -100,5 +99,5 @@ public class Methods {
                         binary[i]=1;}}
                 for (int i = 0; i < list.length; i++){
                     System.out.print(binary[i] + " ");}
-            }
+            }*/
 }
