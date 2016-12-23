@@ -5,6 +5,10 @@ package alloway.austin.main;
  */
 public class Methods {
 
+//----------------------------------------------------------------------
+//SOME METHODS USE OTHER METHODS MAKE SURE YOU COPY ALL THAT YOU NEED!!!
+//----------------------------------------------------------------------
+
 /**reverse array*/
 
             public static void reverse (int list []) {
@@ -87,7 +91,7 @@ public class Methods {
 
 /**Change Number into Binary*/
 
-           /** public static void inBinary(int initial) {
+            public static int[] convertToBinary(int initial) {
                 int [] list = new int [] {128,64,32,16,8,4,2,1};
                 int current = initial;
                 int [] binary = new int [] {0,0,0,0,0,0,0,0};
@@ -97,7 +101,41 @@ public class Methods {
                     else{
                         current -= list[i];
                         binary[i]=1;}}
-                for (int i = 0; i < list.length; i++){
-                    System.out.print(binary[i] + " ");}
-            }*/
+                return binary;
+            }
+
+/**Add Two Binary Arrays*/
+
+            public static int[] addBin(int first[], int second[]){
+                int [] list = new int [] {128,64,32,16,8,4,2,1};
+                int tempOne = 0;
+                int tempTwo=0;
+                int sum = 0;
+                for(int i = 0; i < first.length; i++){
+                    if (first[i] == 1){
+                        tempOne+= list[i];}}
+                for(int i = 0; i < second.length; i++){
+                    if (second[i] == 1){
+                        tempTwo+= list[i];}}
+                sum = tempOne+tempTwo;
+                return convertToBinary(sum);
+}
+
+/**Check if over 255*/
+
+            public static void checkOverflow(int x){
+                if (x>255)
+                    System.out.println("Error: overflow");
+                else
+                    printArray(convertToBinary(x));
+            }
+
+/**Prints Out An Array*/
+
+            public static void printArray(int [] b) {
+                for (int i = 0; i < b.length; i++) {
+                    System.out.print(b[i] + " ");
+                }
+            }
+
 }

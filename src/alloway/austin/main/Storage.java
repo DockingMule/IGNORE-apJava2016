@@ -657,4 +657,72 @@ class Lesson_34_Activity_Six {
         int [] a  = new int [] {1,2,3,4,5};
         allPositive(a);
     }
+
+-----------------------------------------
+Assignment 7:
+-----------------------------------------
+public class Main {
+    public static void checkOverflow(int x){
+        if (x>255)
+            System.out.println("Error: overflow");
+        else
+            printBin(convertToBinary(x));
+    }
+    public static void printBin(int [] b){
+
+        for (int i = 0; i < b.length; i++){
+            System.out.print(b[i] + " ");}
+
+
+    }
+    public static int[] addBin(int first[], int second[]){
+        int [] list = new int [] {128,64,32,16,8,4,2,1};
+        int tempOne = 0;
+        int tempTwo=0;
+        int sum = 0;
+        for(int i = 0; i < first.length; i++){
+            if (first[i] == 1){
+                tempOne+= list[i];}}
+        for(int i = 0; i < second.length; i++){
+            if (second[i] == 1){
+                tempTwo+= list[i];}}
+        sum = tempOne+tempTwo;
+        return convertToBinary(sum);
+    }
+
+    public static int[] convertToBinary(int initial) {
+        int [] list = new int [] {128,64,32,16,8,4,2,1};
+        int current = initial;
+        int [] binary = new int [] {0,0,0,0,0,0,0,0};
+        for (int i = 0; i < list.length; i++){
+            if (current<list[i])
+                binary[i] = 0;
+            else{
+                current -= list[i];
+                binary[i]=1;}}
+        return binary;
+    }
+
+
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Please enter number between 0 and 255 to convert to binary:");
+        int first = scan.nextInt();
+        System.out.println("Please enter another number between 0 and 255 to convert to binary:");
+        int second = scan.nextInt();
+        int sum = first+second;
+        System.out.println("First binary number: ");
+        checkOverflow(first);
+        System.out.println('\n');
+        System.out.println("Second binary number: ");
+        checkOverflow(second);
+        System.out.println('\n');
+        System.out.println("Added: ");
+        if((sum<255)){
+        printBin(addBin(convertToBinary(first), convertToBinary(second)));}
+        else{
+            System.out.println("Error: overflow");}
+    }
+
+}
 }}}}*/
