@@ -3,12 +3,11 @@ package alloway.austin.main;
 /**
  * Created by Austin on 1/4/2017.
  */
-        import java.util.Scanner;
+        import java.io.IOException;
+        import java.util.*;
 
 
-        import java.util.Arrays;
         import java.util.Scanner;
-        import java.util.List;
 
 public class onHold {
 
@@ -44,3 +43,46 @@ public class onHold {
 
     }
 }
+
+
+
+/*package alloway.austin.main;
+
+
+
+
+        import java.io.*;
+
+        import static java.lang.System.*;
+
+        import java.util.Scanner;
+        import java.lang.Math;
+
+        import java.util.ArrayList;
+
+
+
+public class Main{
+//Term 2 Lesson 1: ArrayList
+
+    public static void main (String str[]) throws IOException {
+        ArrayList list  = new ArrayList ();
+        int get;
+        int count = 0;
+        Scanner scan = new Scanner(System.in);
+        while(scan.hasNextLine()){
+            String temp = scan.nextLine();
+            list.add(temp);
+            count++;
+        }
+
+        list.remove(count-1);
+        System.out.println(list);
+
+        if(list.size()>2){
+            list.remove(0);
+            list.remove(list.size()-1);}
+        System.out.print(list);
+    }
+
+}*/

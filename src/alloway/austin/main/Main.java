@@ -18,25 +18,21 @@ public class Main{
 //Term 2 Lesson 1: ArrayList
 
     public static void main (String str[]) throws IOException {
-        ArrayList list  = new ArrayList ();
+        ArrayList <String> list  = new <String> ArrayList ();
         int get;
         int count = 0;
-        Scanner scanner = new Scanner(System.in);
-        while(!(list.contains("stop"))){
-            String temp = scanner.nextLine();
-            list.add(temp);
-            count++;
+        Scanner scan = new Scanner(System.in);
+        while(scan.hasNextLine()){
+            String temp = scan.nextLine();
+            if(!(temp=="stop"))
+                list.add(temp);
+            count++;}
+        for(String b: list){
+            if (b.indexOf('a') != -1)
+                System.out.println(b);
         }
-
-        list.remove(count-1);
-        System.out.println(list);
-
-        if(list.size()>2){
-            list.remove(0);
-            list.remove(list.size()-1);}
-        System.out.print(list);
-        }
-
     }
+
+}
 
 
